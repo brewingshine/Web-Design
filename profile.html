@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <meta name="description" content="Your VYBE profile, event bookings and hosting history.">
+  <title>My VYBE profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/events.js" defer></script>
+  <script src="js/profile.js" defer></script>
+</head>
+<body class="profile-page">
+  <a class="skip-link" href="#profile-main">Skip to profile</a>
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="VYBE home"><span class="brand-mark">V</span><span>VYBE</span></a>
+    <nav class="primary-nav profile-links" aria-label="Main navigation"><a href="index.html#explore">Explore events</a><a href="index.html#register">Host an event</a><a class="nav-link active" href="profile.html">My profile</a></nav>
+  </header>
+  <main id="profile-main">
+    <section class="profile-hero"><div><p class="eyebrow"><span class="eyebrow-line"></span> YOUR VYBE, ALL IN ONE PLACE</p><h1>Your plans.<br><em>Your people.</em></h1><p>Keep track of the experiences you’ve booked and the ideas you’ve brought to life.</p></div><div class="profile-lookup"><form id="profile-lookup-form"><label for="profile-email">Look up your activity with your email</label><div><input id="profile-email" type="email" placeholder="you@example.com" required><button class="button button-orange" type="submit">View profile <span>↗</span></button></div><small>Your profile stays active on this device. Use the same email as your booking or published event.</small></form></div></section>
+    <section class="profile-content" id="profile-content" hidden>
+      <div class="profile-not-found" id="profile-not-found" hidden><p class="eyebrow">NO ACTIVITY FOUND</p><h2>We couldn’t find a profile for that email.</h2><p>Use the same email you entered when booking an event or publishing an event.</p></div>
+      <div class="profile-summary" id="profile-summary"><div class="profile-avatar" id="profile-avatar">V</div><div class="profile-person"><p class="eyebrow">YOUR PROFILE</p><h2 id="profile-name">VYBE member</h2><p id="profile-contact"></p></div><div class="profile-stats"><div><strong id="booking-count">0</strong><span>Bookings</span></div><div><strong id="hosting-count">0</strong><span>Hosted events</span></div></div></div>
+      <div class="profile-columns" id="profile-columns"><section class="profile-history"><div class="profile-section-heading"><div><p class="eyebrow">YOUR NEXT EXPERIENCES</p><h2>Bookings <span id="booking-total">(0)</span></h2></div><a class="text-link" href="index.html#explore">Find another event <span>↗</span></a></div><div id="booking-history" class="history-list"></div></section>
+      <section class="profile-hosting"><div class="profile-section-heading"><div><p class="eyebrow">MADE BY YOU</p><h2>Hosting history <span id="hosting-total">(0)</span></h2></div><a class="text-link" href="index.html#register">Share an idea <span>↗</span></a></div><div id="hosting-history" class="hosting-list"></div></section></div>
+      <p class="profile-note">VYBE is a frontend demo. Your profile activity and ticket details are stored only in this browser; tickets are visual confirmations and aren’t validated at an event venue.</p>
+    </section>
+    <section class="profile-welcome" id="profile-welcome"><span class="welcome-mark">V</span><h2>Your story starts here.</h2><p>Book a place at an event or send a hosting idea, and your activity will show up on this page.</p><a href="index.html#explore" class="button button-dark">Explore events <span>↗</span></a></section>
+  </main>
+  <footer class="site-footer profile-footer"><div class="footer-bottom"><span>© <span id="profile-year"></span> VYBE. Made for the moments.</span><a href="index.html">Back to VYBE ↑</a></div></footer>
+</body>
+</html>
